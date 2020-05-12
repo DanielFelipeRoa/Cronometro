@@ -1,7 +1,6 @@
 import time
 import tkinter as tk
 
-
 class Cronometro(tk.Frame):
     def __init__(self, root, *args, precision=10, **kwargs):
         super().__init__(root, *args, **kwargs)
