@@ -58,10 +58,10 @@ class Cronometro(tk.Frame):
         self._time = t
         horas = int(t)
         segundos = int(t)
-        milisegundos = int((t - segundos) * 1000)
+        decimas = int((t - segundos) * 1000)
         horas = int((t-segundos) / 10)
         minutos, segundos = divmod(segundos, 60)
-        self.label.config(text=f"{horas:02}:{minutos:02}:{segundos:02}:{milisegundos:03}")
+        self.label.config(text=f"{horas:02}:{minutos:02}:{segundos:02}:{decimas:03}")
 
 
 if __name__ == "__main__":
