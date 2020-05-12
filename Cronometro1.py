@@ -13,13 +13,13 @@ class Cronometro(tk.Frame):
         self.boton_cronometrar = tk.Button(self,
                                            text="Comenzar",
                                            font=("Arial", 20),
-                                           width=19,
+                                           width=9,
                                            command=self.cronometrar
                                            )
         self.boton_resetear = tk.Button(self,
                                         text="Resetear",
                                         font=("Arial", 20),
-                                        width=19,
+                                        width=9,
                                         command=self.resetear
                                         )
         self.label = tk.Label(self, font=("Arial", 50), text="00:00:00:000")
@@ -68,6 +68,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Cronómetro")
     root.resizable(False, False)
-    cronometro = Cronometro(root, width=500, height=300, bg="red")
+    root.geometry("400x300")
+    cronometro = Cronometro(root, width=300, height=300, bg="grey")
     cronometro.pack(side="top", fill="both", expand=True)
     root.mainloop()
